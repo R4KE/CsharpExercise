@@ -59,22 +59,25 @@ namespace HelloWorld
 
         static void CalculateWin(Tank tankP, Tank tankE)
         {
+            float winChance = 0;
             Console.Write("\n");
-            CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 100);
+            winChance += CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 100);
             Console.ReadLine();
         }
 
-        static void CalculateHighest(int stat1, int stat2, int factor)
+        static float CalculateHighest(int stat1, int stat2, int factor)
         {
+            float winFactor = 0;
             int dif = Math.Abs(stat1 - stat2);
             if(stat1 > stat2) {
-                winchance += dif * factor;
+                winFactor += dif * factor;
             } else if(stat1 == stat2) {
                 //Do nothing
             } else
             {
-                winchance -= dif * factor;
+                winFactor -= dif * factor;
             }
+            return winFactor;
         }
     }
 }
