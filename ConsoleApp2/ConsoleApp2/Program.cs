@@ -8,8 +8,8 @@ namespace HelloWorld
     {
         static void Main()
         {
-            Tank tank1 = new Tank("T34", "Sovjet-Unie", "Medium", 4, 56, 30, 76, 43, 50);
-            //naam //natie //klasse //bemanningaantal //topsnelheid //gewicht //kanonkaliber //p_romp //p_koepel
+            //Tank win calculator
+
             Console.Write("Hoe heet de tank? : ");
             string naam = Console.ReadLine();
 
@@ -51,6 +51,8 @@ namespace HelloWorld
             Console.Write("\n Wat is de gemiddelde dichte van het koepelpantser in MM? : ");
             int koepelPantser = Convert.ToInt16(Console.ReadLine());
 
+            //naam //natie //klasse //bemanningaantal //topsnelheid //gewicht //kanonkaliber //p_romp //p_koepel
+            Tank tank1 = new Tank("T34", "Sovjet-Unie", "Medium", 4, 56, 30, 76, 43, 50);
             Tank tank2 = new Tank(naam, natie, klasse, bemmaningAantal, topSnelheid, gewicht, kanonKaliber, rompPantser, koepelPantser);
 
             Console.Write("\n Jouw " + tank2.naam + " gaat vechten tegen de " + tank1.naam + ".");
