@@ -53,19 +53,38 @@ namespace HelloWorld
 
             Tank tank2 = new Tank(naam, natie, klasse, bemmaningAantal, topSnelheid, gewicht, kanonKaliber, rompPantser, koepelPantser);
 
-            Console.Write("\n Jouw " + tank2.naam + " gaat vechten tegen de " + tank1.naam);
-            CalculateWin(tank1, tank2);
+            Console.Write("\n Jouw " + tank2.naam + " gaat vechten tegen de " + tank1.naam + ".");
+            CalculateWinChance(tank1, tank2);
         }
 
-        static void CalculateWin(Tank tankP, Tank tankE)
+        static void CalculateWinChance(Tank tankP, Tank tankE)
         {
             float winChance = 0;
-            Console.Write("\n");
-            winChance += CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 100);
+            winChance -= CalculateHighest(tankP.topsnelheid, tankE.topsnelheid, 0.03f);
+            winChance += CalculateHighest(tankP.gewicht, tankE.gewicht, 0.01f);
+            winChance -= CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 0.08f);
+            winChance -= CalculateHighest(tankP.pantserdikte_romp, tankE.pantserdikte_romp, 0.05f);
+            winChance -= CalculateHighest(tankP.pantserdikte_koepel, tankE.pantserdikte_koepel, 0.05f);
+            if (CalculateWin(winChance) == true)
+            {
+                Console.Write("\n Je " + tankP + " heeft gewonnen!");
+            } else
+            {
+                Console.Write("\n Je " + tankE + " heeft gewonnen!");
+            }
             Console.ReadLine();
         }
 
-        static float CalculateHighest(int stat1, int stat2, int factor)
+        static bool CalculateWin(float winChance)
+        {
+            bool win = false;
+            if (winChance > 0) {
+                win = true;
+            }
+            return win;
+        }
+
+        static float CalculateHighest(int stat1, int stat2, float factor)
         {
             float winFactor = 0;
             int dif = Math.Abs(stat1 - stat2);
