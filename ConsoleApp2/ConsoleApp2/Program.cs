@@ -67,12 +67,17 @@ namespace HelloWorld
             winChance += CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 0.08f);
             winChance += CalculateHighest(tankP.pantserdikte_romp, tankE.pantserdikte_romp, 0.05f);
             winChance += CalculateHighest(tankP.pantserdikte_koepel, tankE.pantserdikte_koepel, 0.05f);
+            winChance -= CalculateHighest(tankP.kanonkaliber, tankE.topsnelheid, 0.03f);
+
+            float winRate = 100 * winChance;
             if (CalculateWin(winChance) == true)
             {
                 Console.Write("\n Je " + tankP.naam + " heeft gewonnen!");
+                Console.Write("\n Het winpercentage van de " + tankP.naam + " is " + winRate + "%");
             } else
             {
                 Console.Write("\n De vijand, de " + tankE.naam + " heeft gewonnen!");
+                Console.Write("\n Het winpercentage van de " + tankE.naam + " is " + -winRate + "%");
             }
             Console.ReadLine();
         }
