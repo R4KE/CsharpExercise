@@ -22,12 +22,9 @@ namespace HelloWorld
             bool incorrect = true;
             while (incorrect)
             {
-                Console.Write("\n");
-                Console.Write("Van welk type is de tank? \n");
-                Console.Write("\n");
-                Console.Write("licht | medium | zwaar | mbt | spg | antitank \n");
-                Console.Write("\n");
-                Console.Write(" : ");
+                Console.Write("\n Van welk type is de tank? \n");
+                Console.Write(" \nlicht | medium | zwaar | mbt | spg | antitank \n");
+                Console.Write("\n : ");
                 klasse = Console.ReadLine();
                 if (klasse.ToLower() == "licht" || klasse.ToLower() == "medium" || klasse.ToLower() == "zwaar" || klasse.ToLower() == "mbt" || klasse.ToLower() == "spg" || klasse.ToLower() == "antitank") {
                     incorrect = false;
@@ -37,41 +34,33 @@ namespace HelloWorld
 
             }
 
-            Console.Write("\n");
-            Console.Write("Hoeveel mennen zitten er in het pantservoertuig? : ");
+            Console.Write("\n Hoeveel mennen zitten er in het pantservoertuig? : ");
             int bemmaningAantal = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("\n");
-            Console.Write("Wat is de topsnelheid? : ");
+            Console.Write("\n Wat is de topsnelheid? : ");
             int topSnelheid = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("\n");
-            Console.Write("Hoe zwaar is de tank in ton? : ");
+            Console.Write("\n Hoe zwaar is de tank in ton? : ");
             int gewicht = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("\n");
-            Console.Write("Wat is de diameter van het kanon in MM? : ");
+            Console.Write("\n Wat is de diameter van het kanon in MM? : ");
             int kanonKaliber = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("\n");
-            Console.Write("Wat is de gemiddelde dichte van het romppantser in MM? : ");
+            Console.Write("\n Wat is de gemiddelde dichte van het romppantser in MM? : ");
             int rompPantser = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("\n");
-            Console.Write("Wat is de gemiddelde dichte van het koepelpantser in MM? : ");
+            Console.Write("\n Wat is de gemiddelde dichte van het koepelpantser in MM? : ");
             int koepelPantser = Convert.ToInt16(Console.ReadLine());
-
-            Console.Write("\n \n \n");
 
             Tank tank2 = new Tank(naam, natie, klasse, bemmaningAantal, topSnelheid, gewicht, kanonKaliber, rompPantser, koepelPantser);
 
-            Console.Write("Jouw " + tank2.naam + " gaat vechten tegen de " + tank1.naam);
+            Console.Write("\n Jouw " + tank2.naam + " gaat vechten tegen de " + tank1.naam);
             CalculateWin(tank1, tank2);
         }
 
         static void CalculateWin(Tank tankP, Tank tankE)
         {
-            Console.Write("Hoe heet de tank? : ");
+            Console.Write("\n");
             Console.ReadLine();
         }
     }
