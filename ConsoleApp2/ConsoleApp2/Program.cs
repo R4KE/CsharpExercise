@@ -6,7 +6,6 @@ namespace HelloWorld
 
     class Program
     {
-
         static void Main()
         {
             Tank tank1 = new Tank("T34", "Sovjet-Unie", "Medium", 4, 56, 30, 76, 43, 50);
@@ -34,7 +33,7 @@ namespace HelloWorld
 
             }
 
-            Console.Write("\n Hoeveel mennen zitten er in het pantservoertuig? : ");
+            Console.Write("\n Hoeveel mensen zitten er in het pantservoertuig? : ");
             int bemmaningAantal = Convert.ToInt16(Console.ReadLine());
 
             Console.Write("\n Wat is de topsnelheid? : ");
@@ -61,7 +60,21 @@ namespace HelloWorld
         static void CalculateWin(Tank tankP, Tank tankE)
         {
             Console.Write("\n");
+            CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 100);
             Console.ReadLine();
+        }
+
+        static void CalculateHighest(int stat1, int stat2, int factor)
+        {
+            int dif = Math.Abs(stat1 - stat2);
+            if(stat1 > stat2) {
+                winchance += dif * factor;
+            } else if(stat1 == stat2) {
+                //Do nothing
+            } else
+            {
+                winchance -= dif * factor;
+            }
         }
     }
 }
