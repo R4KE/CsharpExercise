@@ -28,7 +28,7 @@ namespace HelloWorld
                 if (klasse.ToLower() == "licht" || klasse.ToLower() == "medium" || klasse.ToLower() == "zwaar" || klasse.ToLower() == "mbt" || klasse.ToLower() == "spg" || klasse.ToLower() == "antitank") {
                     incorrect = false;
                 } else {
-                    Console.Write("Bestaat niet... ");
+                    Console.Write("\n Bestaat niet... ");
                 }
 
             }
