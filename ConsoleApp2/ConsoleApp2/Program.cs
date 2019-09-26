@@ -53,9 +53,9 @@ namespace HelloWorld
 
             //naam //natie //klasse //bemanningaantal //topsnelheid //gewicht //kanonkaliber //p_romp //p_koepel
 
-            Tank tank2 = new Tank("T34", "Sovjet-Unie", "Medium", 4, 56, 30, 76, 43, 50);
+            //Tank tank2 = new Tank("T34", "Sovjet-Unie", "Medium", 4, 56, 30, 76, 43, 50);
             //Tank tank2 = new Tank("Tiger I", "Duitsland", "Zwaar", 5, 40, 55, 88, 90, 90);
-            //Tank tank2 = new Tank("Panther I", "Duitsland", "Medium", 5, 55, 45, 75, 58, 63);
+            Tank tank2 = new Tank("Panther I", "Duitsland", "Medium", 5, 55, 45, 75, 58, 63);
             //Tank tank2 = new Tank("MS-1", "Sovjet-Unie", "Licht", 2, 32, 6, 45, 16, 16);
             //Tank tank2 = new Tank("E75", "Duitsland", "Zwaar", 5, 40, 85, 128, 132, 115);
             //Tank tank2 = new Tank("Maus", "Duitsland", "Zwaar", 6, 20, 188, 128, 182, 226);
