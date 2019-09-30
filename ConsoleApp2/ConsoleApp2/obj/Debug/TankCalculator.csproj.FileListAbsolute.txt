@@ -4,3 +4,4 @@ C:\Users\scpcb\source\repos\CsharpExercise\ConsoleApp2\ConsoleApp2\bin\Debug\Con
 C:\Users\scpcb\source\repos\CsharpExercise\ConsoleApp2\ConsoleApp2\obj\Debug\TankCalculator.csproj.CoreCompileInputs.cache
 C:\Users\scpcb\source\repos\CsharpExercise\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
 C:\Users\scpcb\source\repos\CsharpExercise\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\scpcb\source\repos\CsharpExercise\ConsoleApp2\ConsoleApp2\obj\Debug\TankCalculator.csprojAssemblyReference.cache

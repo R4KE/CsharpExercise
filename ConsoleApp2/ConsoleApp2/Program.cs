@@ -64,29 +64,29 @@ namespace HelloWorld
 
             Tank tank1 = new Tank(naam, natie, klasse, bemmaningAantal, topSnelheid, gewicht, kanonKaliber, rompPantser, koepelPantser);
 
-            Console.Write("\n Jouw " + tank1.naam + " gaat vechten tegen de " + tank2.naam + ".");
+            Console.Write("\n Jouw " + tank1.TankNaam + " gaat vechten tegen de " + tank2.TankNaam + ".");
             CalculateWinChance(tank1, tank2);
         }
 
         static void CalculateWinChance(Tank tankP, Tank tankE)
         {
             float winChance = 0;
-            winChance += CalculateHighest(tankP.topsnelheid, tankE.topsnelheid, 0.03f);
-            winChance -= CalculateHighest(tankP.gewicht, tankE.gewicht, 0.01f);
-            winChance += CalculateHighest(tankP.kanonkaliber, tankE.kanonkaliber, 0.08f);
-            winChance += CalculateHighest(tankP.pantserdikte_romp, tankE.pantserdikte_romp, 0.05f);
-            winChance += CalculateHighest(tankP.pantserdikte_koepel, tankE.pantserdikte_koepel, 0.05f);
-            winChance -= CalculateHighest(tankP.kanonkaliber, tankE.topsnelheid, 0.03f);
+            winChance += CalculateHighest(tankP.TankSnelheid, tankE.TankSnelheid, 0.03f);
+            winChance -= CalculateHighest(tankP.TankGewicht, tankP.TankGewicht, 0.01f);
+            winChance += CalculateHighest(tankP.TankKanon, tankE.TankKanon, 0.08f);
+            winChance += CalculateHighest(tankP.TankRompPantser, tankE.TankRompPantser, 0.05f);
+            winChance += CalculateHighest(tankP.TankKoepelPantser, tankE.TankKoepelPantser, 0.05f);
+            winChance -= CalculateHighest(tankP.TankKanon, tankE.TankSnelheid, 0.03f);
 
             float winRate = 100 * winChance;
             if (CalculateWin(winChance) == true)
             {
-                Console.Write("\n Je " + tankP.naam + " heeft gewonnen!");
-                Console.Write("\n Het winpercentage van de " + tankP.naam + " is " + winRate + "%");
+                Console.Write("\n Je " + tankP.TankNaam + " heeft gewonnen!");
+                Console.Write("\n Het winpercentage van de " + tankP.TankNaam + " is " + winRate + "%");
             } else
             {
-                Console.Write("\n De vijand, de " + tankE.naam + " heeft gewonnen!");
-                Console.Write("\n Het winpercentage van de " + tankE.naam + " is " + -winRate + "%");
+                Console.Write("\n De vijand, de " + tankE.TankNaam + " heeft gewonnen!");
+                Console.Write("\n Het winpercentage van de " + tankE.TankNaam + " is " + -winRate + "%");
             }
             Console.ReadLine();
         }
