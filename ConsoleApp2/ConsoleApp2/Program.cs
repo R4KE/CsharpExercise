@@ -73,10 +73,10 @@ namespace HelloWorld
             float winChance = 0;
             winChance += CalculateHighest(tankP.TankSnelheid, tankE.TankSnelheid, 0.03f);
             winChance -= CalculateHighest(tankP.TankGewicht, tankP.TankGewicht, 0.01f);
-            winChance += CalculateHighest(tankP.TankKanon, tankE.TankKanon, 0.08f);
-            winChance += CalculateHighest(tankP.TankRompPantser, tankE.TankRompPantser, 0.05f);
-            winChance += CalculateHighest(tankP.TankKoepelPantser, tankE.TankKoepelPantser, 0.05f);
-            winChance -= CalculateHighest(tankP.TankKanon, tankE.TankSnelheid, 0.03f);
+            winChance += CalculateHighest(tankP.TankKanonKaliber, tankE.TankKanonKaliber, 0.08f);
+            winChance += CalculateHighest(tankP.TankPantserdikte_romp, tankE.TankPantserdikte_romp, 0.05f);
+            winChance += CalculateHighest(tankP.TankPantserdikte_koepel, tankE.TankPantserdikte_koepel, 0.05f);
+            winChance -= CalculateHighest(tankP.TankKanonKaliber, tankE.TankSnelheid, 0.03f);
 
             float winRate = 100 * winChance;
             if (CalculateWin(winChance) == true)

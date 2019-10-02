@@ -8,38 +8,38 @@ namespace ConsoleApp2
 {
     public class Tank
     {
-        private string naam;
-        private string natie;
-        private string klasse;
-        private int bemanningaantal;
-        private int topsnelheid;
-        private int gewicht;
-        private int kanonkaliber;
-        private int pantserdikte_romp;
-        private int pantserdikte_koepel;
+        private string tankNaam;
+        private string tankNatie;
+        private string tankKlasse;
+        private int tankBemanningAantal;
+        private int tankTopsnelheid;
+        private int tankGewicht;
+        private int tankKanonkaliber;
+        private int tankPantserdikte_romp;
+        private int tankPantserdikte_koepel;
 
         public Tank(string nNaam, string nNatie, string nKlasse, int nBemanningaantal, int nTopsnelheid, int nGewicht, int nKanonkaliber, int nPantserdikte_romp, int nPantserdikte_koepel)
         {
-            naam = nNaam;
-            natie = nNatie;
-            klasse = nKlasse;
-            bemanningaantal = nBemanningaantal;
-            topsnelheid = nTopsnelheid;
-            gewicht = nGewicht;
-            kanonkaliber = nKanonkaliber;
-            pantserdikte_romp = nPantserdikte_romp;
-            pantserdikte_koepel = nPantserdikte_koepel;
+            tankNaam = nNaam;
+            tankNatie = nNatie;
+            tankKlasse = nKlasse;
+            tankBemanningAantal = nBemanningaantal;
+            tankTopsnelheid = nTopsnelheid;
+            tankGewicht = nGewicht;
+            tankKanonkaliber = nKanonkaliber;
+            TankPantserdikte_romp = nPantserdikte_romp;
+            TankPantserdikte_koepel = nPantserdikte_koepel;
         }
 
         public string TankNaam
         {
             get
             {
-                return TankNaam;
+                return tankNaam;
             }
             set
             {
-                TankNaam = naam;
+                tankNaam = value;
             }
         }
 
@@ -47,11 +47,11 @@ namespace ConsoleApp2
         {
             get
             {
-                return TankNatie;
+                return tankNatie;
             }
             set
             {
-                TankNatie = natie;
+                tankNatie = value;
             }
         }
 
@@ -59,23 +59,23 @@ namespace ConsoleApp2
         {
             get
             {
-                return TankKlasse;
+                return tankKlasse;
             }
             set
             {
-                TankKlasse = klasse;
+                tankKlasse = value;
             }
         }
 
-        public int TankBemmaning
+        public int TankBemanningAantal
         {
             get
             {
-                return TankBemmaning;
+                return tankBemanningAantal;
             }
             set
             {
-                TankBemmaning = bemanningaantal;
+                tankBemanningAantal = value;
             }
         }
 
@@ -83,11 +83,11 @@ namespace ConsoleApp2
         {
             get
             {
-                return TankSnelheid;
+                return tankTopsnelheid;
             }
             set
             {
-                TankSnelheid = topsnelheid;
+                tankTopsnelheid = value;
             }
         }
 
@@ -95,49 +95,49 @@ namespace ConsoleApp2
         {
             get
             {
-                return TankGewicht;
+                return tankGewicht;
             }
             set
             {
-                TankGewicht = gewicht;
+                tankGewicht = value;
             }
         }
 
-        public int TankKanon
+        public int TankKanonKaliber
         {
             get
             {
-                return TankKanon;
+                return tankKanonkaliber;
             }
             set
             {
-                TankKanon = kanonkaliber;
+                tankKanonkaliber = value;
             }
         }
 
-        public int TankRompPantser
+        public int TankPantserdikte_romp
         {
             get
             {
-                return TankRompPantser;
+                return tankPantserdikte_romp;
             }
             set
             {
-                TankRompPantser = pantserdikte_romp;
+                tankPantserdikte_romp = value;
             }
         }
 
-        public int TankKoepelPantser
+        public int TankPantserdikte_koepel
         {
             get
             {
-                return TankKoepelPantser;
+                return tankPantserdikte_koepel;
             }
             set
             {
-                TankKoepelPantser = pantserdikte_koepel;
+                tankPantserdikte_koepel = value;
             }
         }
+
     }
-
 }
